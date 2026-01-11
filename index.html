@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rotating Text</title>
+<style>
+body {
+  margin: 0;
+  background: transparent;
+}
+#text {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  opacity: 0.75;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="text">LIKE ❤️ FOR GOOD LUCK</div>
+
+<script>
+const lines = [
+  "LIKE ❤️ FOR GOOD LUCK",
+  "SUBSCRIBE FOR DAILY BGMI 🔔",
+  "ROAD TO CONQUEROR 🔥",
+  "WAIT FOR THE CLUTCH 👑",
+  "NEW HERE? WELCOME 👋",
+  "DON’T SCROLL 👀"
+];
+
+let i = 0;
+setInterval(() => {
+  document.getElementById("text").textContent = lines[i];
+  i = (i + 1) % lines.length;
+}, 3500);
+</script>
+</body>
+</html>
